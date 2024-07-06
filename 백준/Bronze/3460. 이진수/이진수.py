@@ -1,9 +1,9 @@
 T = int(input())
 for _ in range(T):
     n = int(input())
+    bit = "".join(reversed(bin(n)[2:]))
     order = 0
-    while n > 0:
-        if n % 2 == 1:
+    for _ in bit:
+        if bit[order] == '1':
             print(order, end=" ")
-        n = n // 2
         order += 1
