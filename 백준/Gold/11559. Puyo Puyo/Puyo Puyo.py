@@ -33,12 +33,16 @@ def puyo_pop(same_puyos):
 # 뿌요 내리기
 def puyo_down():
     for y in range(6):
-        for x in range(10, -1, -1):
-            for z in range(11, x, -1):
-                if board[z][y] == '.' and board[x][y] != '.':
-                    board[z][y] = board[x][y]
-                    board[x][y] = '.'
-                    break
+        queue = []
+        for x in range(11, -1, -1):
+            if board[x][y] != '.':
+                queue.append(board[x][y])
+                board[x][y] = '.'
+        for x in range(11, -1, -1):
+            if queue:
+                board[x][y] = queue.pop(0)
+            else:
+                break
 
         
 if __name__ == "__main__":
