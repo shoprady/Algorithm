@@ -2,7 +2,7 @@ from collections import deque
 
 n, m = map(int, input().split())
 delete_nums = list(map(int, input().split()))
-nums = deque([i for i in range(1, n + 1)])
+nums = deque(range(1, n + 1))
 
 count = 0
 for num in delete_nums:
