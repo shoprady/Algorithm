@@ -32,8 +32,6 @@ if __name__ == "__main__":
         root, left, right = input().split()
         tree[root] = Node(root, left, right)
     
-    preorder(tree['A'])
-    print()
-    inorder(tree['A'])
-    print()
+    preorder(tree['A']); print()
+    inorder(tree['A']); print()
     postorder(tree['A'])
