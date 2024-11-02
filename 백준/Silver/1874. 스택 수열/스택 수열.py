@@ -1,6 +1,7 @@
 n = int(input())
 stack, ans, check = [], [], True
 order = 1
+
 for _ in range(n):
     num = int(input())
     while order <= num:
@@ -10,7 +11,7 @@ for _ in range(n):
     if num == stack[-1]:
         stack.pop()
         ans.append('-')
-    elif num in stack:
+    else:
         check = False
         break
         
