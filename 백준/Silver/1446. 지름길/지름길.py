@@ -6,14 +6,15 @@ for _ in range(n):
         street.append([start, end, dist])
     
 ans = [i for i in range(d + 1)]
-street.sort(key=lambda x: x[1])
+street.sort()
 
 for start, end, dist in street:
-    if ans[end] > ans[start] + dist:
-        ans[end] = ans[start] + dist
+    shortcut = ans[start] + dist
+    if ans[end] > shortcut:
+        ans[end] = min(ans[end], shortcut)
         tmp = 1
         for i in range(end + 1, d + 1):
-            ans[i] = ans[end] + tmp
+            ans[i] = min(ans[i], ans[end] + tmp)
             tmp += 1
             
 print(ans[d])
