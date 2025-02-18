@@ -1,14 +1,14 @@
 k, n = map(int, input().split())
-budgets = []
+lines = []
 for _ in range(k):
-    budgets.append(int(input()))
+    lines.append(int(input()))
     
-ans, left, right = 0, 1, max(budgets)
+ans, left, right = 0, 1, max(lines)
 while left <= right:
     tmp = 0
     mid = (left + right) // 2
-    for budget in budgets:
-        tmp += budget // mid
+    for line in lines:
+        tmp += line // mid
     
     if tmp < n:
         right = mid - 1
