@@ -1,0 +1,1 @@
+print(1 if int(input()) % 11 == 0 else 0)
