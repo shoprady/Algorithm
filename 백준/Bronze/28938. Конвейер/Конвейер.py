@@ -1,0 +1,5 @@
+n = input()
+check = sum(list(map(int, input().split())))
+if check > 0: print('Right')
+elif check < 0: print('Left')
+else: print('Stay')
