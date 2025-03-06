@@ -1,0 +1,6 @@
+b = int(input())
+w, p, n = int(input()), int(input()), int(input())
+if w <= b: print('Watermelon')
+elif p <= b: print('Pomegranates')
+elif n <= b: print('Nuts')
+else: print('Nothing')
