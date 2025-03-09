@@ -1,0 +1,6 @@
+key = input().split()
+if key[1] == 'miss': print(0)
+elif key[1] == 'bad': print(int(key[0]) * 200)
+elif key[1] == 'cool': print(int(key[0]) * 400)
+elif key[1] == 'great': print(int(key[0]) * 600)
+else: print(int(key[0]) * 1000)
