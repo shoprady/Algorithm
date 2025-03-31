@@ -1,4 +1,7 @@
+import sys
 from heapq import heappush, heappop
+input = sys.stdin.readline
+
 heap = []
 for _ in range(int(input())):
     x = int(input())
